@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>DEMO</title>
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="mobile">
+        <header class="chat_header" id="head">
+            <div class="title" id="title"><span id="nickname">在线咨询</span><span id="onlineState">在线</span></div>
+        </header>
+        <div id="newMessageRemind">
+            <div id="newMessageRemindText"><!-- 新消息：消息内容消息内容 --></div>
+            <div id="newMessageRemindClose" onclick="document.getElementById('newMessageRemind').style.display='none';">X</div>
+        </div>
+        
+        <section id="chatcontent" onclick="kefu.chat.switchToJianpanShuruType();">
+        </section>
+        
+        <footer id="chat_footer">
+            <div id="input_area">
+                <div id="textInput">
+                    <div id="shuruType" onclick="kefu.chat.shuruTypeChange();">
+                    </div>
+                    <!-- 键盘输入 -->
+                    <!-- <input type="text" id="text111" onclick="kefu.ui.chat.textInputClick();"> -->
+                    <div id="text" contenteditable="true" onclick="kefu.ui.chat.textInputClick();"></div>
+                    <input type="submit" value="发送" class="send" id="sendButton" onclick="kefu.chat.sendButtonClick();">
+                </div>
+                <div id="inputExtend">
+                    <!-- 其他，如图片、商品、订单 -->
+
+                </div>    
+                <div id="inputExtendShowArea">
+                    <!-- inputExtend的显示区域，如表情的显示 -->
+                </div>
+            </div>
+        </footer>
+    </div>
+<script src="./main.js"></script> 
+<!-- <script src="./extend/luyin/luyin.js"></script> -->
+<script type="text/javascript">
+// alert(navigator.userAgent.toLowerCase())
+
+// kefu.js 初始化
+// kefu.init();
+kefu.ui.chat.entry("");
+</script>
+</body>
+</html>
